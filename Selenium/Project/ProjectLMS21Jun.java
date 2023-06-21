@@ -111,8 +111,10 @@ public class ProjectLMS21Jun {
     public void completeSimpleLesson() {
         login();
         countNoOfCourses();
-        driver.findElement(By.xpath("//*[contains(@href,'https://alchemy.hguy.co/lms/courses/social-media-marketing/')]")).click();
-        
+        driver.findElement(By.xpath("//*[contains(@class,'btn btn-primary')]")).click();
+        driver.findElement(By.xpath("//div[contains(@class, 'ld-item-title')]")).click();
+        driver.findElement(By.xpath("//input[contains(@class, 'learndash_mark_complete_button')]")).click();
+        System.out.println("Course completed");
     }
 
 
